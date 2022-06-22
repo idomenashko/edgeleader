@@ -228,10 +228,11 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="/js/lightbox.min.js"></script>
+  <script src="js/lightbox.min.js"></script>
   <script>
     const navbar = document.getElementById('navbar');
     let scrolled = false;
+
     window.onscroll = function () {
       if (window.pageYOffset > 100) {
         navbar.classList.remove('top');
@@ -242,15 +243,14 @@
           navbar.style.transform = 'translateY(0)';
           scrolled = true;
         }, 200);
-      }
-      else {
+      } else {
         navbar.classList.add('top');
-        scrolled = false
+        scrolled = false;
       }
     };
 
     // Smooth Scrolling
-    $('#navbar a,').on('click', function (e) {
+    $('#navbar a, .btn').on('click', function (e) {
       if (this.hash !== '') {
         e.preventDefault();
 
